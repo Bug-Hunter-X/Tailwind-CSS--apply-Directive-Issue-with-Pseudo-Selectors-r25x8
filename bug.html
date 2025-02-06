@@ -1,0 +1,9 @@
+This bug occurs when using Tailwind's `@apply` directive with a class that contains a pseudo-selector, like `&:hover`.  The `@apply` directive doesn't correctly apply the styles when the pseudo-selector is involved.
+
+```html
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded @apply focus:outline-none focus:shadow-outline">
+  Click Me
+</button>
+```
+
+In this example, the `focus:outline-none` and `focus:shadow-outline` classes won't be applied correctly when the button receives focus because of how `@apply` interacts with pseudo-selectors.

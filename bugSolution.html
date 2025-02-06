@@ -1,0 +1,9 @@
+The solution is to avoid using `@apply` for classes with pseudo-selectors.  Apply the classes directly:
+
+```html
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+  Click Me
+</button>
+```
+
+This approach ensures that the styles associated with the pseudo-selectors (`hover`, `focus`) are applied correctly.  The `@apply` directive can be used for other classes without pseudo-selectors.
